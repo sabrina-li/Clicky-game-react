@@ -1,6 +1,9 @@
 import React from 'react';
-import ImgCard from './components/ImgCard';
+import CardList from './components/CardList';
+import {images} from "./images.json";
 import './App.css';
+
+// console.log(images);
 
 function App() {
   return (
@@ -9,7 +12,7 @@ function App() {
         <h1>clicky game</h1>
       </header>
       <main>
-        <ImgCard imgName="heart" imgFile="heart.png" />
+        <CardList images={images} />
       </main>
     </div>
   );
