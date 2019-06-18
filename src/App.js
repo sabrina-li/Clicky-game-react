@@ -1,15 +1,20 @@
 import React from 'react';
 import CardList from './components/CardList';
 import {images} from "./images.json";
+import MessageBanner from "./components/MessageBanner";
 import './App.css';
 
 class App extends React.Component{
   state={
     highScore:0,
-    currentScore:0
+    currentScore:0,
+    message:''
   }
+  timerId = 0;
+
 
   increaseScore = ()=>{
+    this.showMessage(true);
     this.setState(prevState=>{
       const newCurrentScore = prevState.currentScore + 1;
       const newHighScore = prevState.highScore>=newCurrentScore ? prevState.highScore:newCurrentScore;
@@ -18,11 +23,23 @@ class App extends React.Component{
   }
 
   resetScore = ()=>{
+    this.showMessage(false);
     this.setState({currentScore:0});
   }
 
+  showMessage = (correct)=>{
+    clearTimeout(this.timerId);
+    if(correct){
+      this.setState({message:"Correct!"});
+    }else{
+      this.setState({message:"Wrong!"})
+    }
+    this.timerId = setTimeout(() => {
+      this.setState({message:''})
+  }, 1000);
+  }
+
   render(){
-    console.log(this.state)
     return <div className="App">
             <header className="App-header">
               <h1>clicky game</h1>
@@ -32,6 +49,7 @@ class App extends React.Component{
               </div>
             </header>
             <main>
+              <MessageBanner message={this.state.message} />
               <CardList images={images} increaseScore={this.increaseScore} resetScore={this.resetScore}/>
             </main>
           </div>
