@@ -2,7 +2,7 @@ import React from 'react';
 import CardList from './components/CardList';
 import {images} from "./images.json";
 import MessageBanner from "./components/MessageBanner";
-import './App.css';
+import './App.scss';
 
 class App extends React.Component{
   state={
@@ -40,10 +40,10 @@ class App extends React.Component{
   }
 
   render(){
-    return <div className="App">
+    return <div className="App container">
             <header className="App-header">
-              <h1>clicky game</h1>
-              <div>
+              <h1>Visual Memory Game</h1>
+              <div id="scores">
                 <p>Current Score: <span>{this.state.currentScore}</span></p>
                 <p>Your High Score: <span>{this.state.highScore}</span></p>
               </div>

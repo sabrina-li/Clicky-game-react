@@ -7,7 +7,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+
+.App-header h1{
+  text-transform: uppercase;
+  display: inline-block;
+}
+.App-header #scores{
+  display: inline-block;
+  position: absolute;
+  right: 0;
 }
