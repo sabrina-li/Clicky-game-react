@@ -47,7 +47,7 @@ class App extends React.Component{
                   <h1 className="title is-2 has-text-light">Visual Memory - Game!</h1>
                 </div>
                 <div id="scores">
-                  <a className="subtitle is-5 has-text-link" href="/">How to</a>
+                  {/* <a className="subtitle is-5 has-text-link" href="/">How to</a> */}
                   <p>Current Score: <span>{this.state.currentScore}</span></p>
                   <p>Your High Score: <span>{this.state.highScore}</span></p>
                 </div>
