@@ -52,10 +52,10 @@ class App extends React.Component{
                   <p>Your High Score: <span>{this.state.highScore}</span></p>
                 </div>
               </div>
-
+              <MessageBanner message={this.state.message} />
             </header>
             <main>
-              <MessageBanner message={this.state.message} />
+              
               <CardList images={images} increaseScore={this.increaseScore} resetScore={this.resetScore}/>
             </main>
           </div>

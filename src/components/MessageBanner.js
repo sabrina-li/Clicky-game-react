@@ -5,7 +5,7 @@ function MessageBanner(props){
         display:props.message?"block":"none"
     }
 
-    return <div className="notification" role="dialog" style={style}>
+    return <div className="notification overlay" role="dialog" style={style}>
             <button className="delete"></button>
             <p className="notification-text ">{props.message}</p>
         </div>

@@ -39,7 +39,16 @@
 //     height: fit-content;
 // }
 
-// /* Modal Content */
+.overlay{
+    position: absolute;
+    left: 30vw;
+    right: 30vw;
+    width: 40vw;
+    top:20px;
+    // left: auto;
+    // right: auto;
+}
+
 .notification-text {
     text-align: center;
     margin: auto;
