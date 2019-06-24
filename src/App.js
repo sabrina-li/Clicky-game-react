@@ -40,13 +40,19 @@ class App extends React.Component{
   }
 
   render(){
-    return <div className="App container">
-            <header className="App-header">
-              <h1>Visual Memory Game</h1>
-              <div id="scores">
-                <p>Current Score: <span>{this.state.currentScore}</span></p>
-                <p>Your High Score: <span>{this.state.highScore}</span></p>
+    return <div className="App">
+            <header className="App-header has-background-dark">
+              <div className="level container has-text-light">
+                <div>
+                  <h1 className="title is-2 has-text-light">Visual Memory - Game!</h1>
+                </div>
+                <div id="scores">
+                  <a className="subtitle is-5 has-text-link" href="/">How to</a>
+                  <p>Current Score: <span>{this.state.currentScore}</span></p>
+                  <p>Your High Score: <span>{this.state.highScore}</span></p>
+                </div>
               </div>
+
             </header>
             <main>
               <MessageBanner message={this.state.message} />

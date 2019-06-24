@@ -5,13 +5,10 @@ function MessageBanner(props){
         display:props.message?"block":"none"
     }
 
-    return <div className="modal fade" role="dialog" style={style}>
-        <div className="modal-content">
-            <h4 className="modal-title">{props.message}</h4>
+    return <div className="notification" role="dialog" style={style}>
+            <button className="delete"></button>
+            <p className="notification-text ">{props.message}</p>
         </div>
-    </div>
-
-    
 }
 
 export default MessageBanner;
